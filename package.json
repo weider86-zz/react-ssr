@@ -7,5 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Weider Lima <weider86@gmal.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weider86/react-boilerplate.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/weider86/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/weider86/react-boilerplate#readme"
 }
