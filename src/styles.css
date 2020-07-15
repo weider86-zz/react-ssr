@@ -2,5 +2,8 @@ html {
   box-sizing: border-box;
   font-size: 20px;
   font-family: sans-serif;
-  background-color: tomato;
+}
+
+.warning {
+  color: tomato;
 }
