@@ -1,6 +1,10 @@
+import React from 'react';
+import {render} from '@testing-library/react';
+
+import App from './App';
+
 describe('<App />', () => {
-  it('should pass', () => {
-    expect(true).toBe(true);
-    expect(false).toBe(false);
+  it('should render', () => {
+    render(<App />);
   });
 });
