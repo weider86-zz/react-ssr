@@ -1,12 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react'
 
 const Warning = lazy(async () => ({
-  default: (
-    await import(
-      /* webpackChunkName: "other" */
-      './Warning'
-    )
-  ).Warning,
+  default: (await import(/* webpackChunkName: "other" */ './Warning')).Warning,
 }))
 
 export const App = () => {
