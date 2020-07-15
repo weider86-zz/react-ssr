@@ -1,10 +1,18 @@
-import React, {useState} from 'react';
-import {hot} from 'react-hot-loader';
+import React, { useState, lazy, Suspense } from 'react'
 
-const Warning = React.lazy(() => import('./Warning'));
+const Warning = lazy(async () => ({
+  default: (
+    await import(
+      /* webpackChunkName: "other" */
+      './Warning'
+    )
+  ).Warning,
+}))
 
-const App = () => {
-  const [count, setCount] = useState(0);
+export const App = () => {
+  const [count, setCount] = useState(0)
+
+  const loading = () => <p>Loading...</p>
 
   return (
     <>
@@ -12,13 +20,12 @@ const App = () => {
       <h2>Count: {count}</h2>
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
+
       {count > 10 && (
-        <React.Suspense fallback={null}>
+        <Suspense fallback={loading}>
           <Warning />
-        </React.Suspense>
+        </Suspense>
       )}
     </>
-  );
-};
-
-export default hot(module)(App);
+  )
+}
