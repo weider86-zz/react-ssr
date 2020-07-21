@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "react-styled-components",
-=======
   "name": "react-styled-boilerplate",
->>>>>>> 3275ef8b90210f71e4a0b79ad3bddafd4cc654c5
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
