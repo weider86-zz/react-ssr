@@ -5,11 +5,6 @@ import { App } from './App'
 import ErrorBoundary from './ErrorBoundary'
 import './styles.css'
 
-if (process.env.NODE_ENV === 'development') {
-  const axe = require('react-axe')
-  axe(React, ReactDOM, 1000)
-}
-
 ReactDOM.render(
   <React.StrictMode>
     <ErrorBoundary>
