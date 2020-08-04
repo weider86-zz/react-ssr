@@ -1,5 +1,5 @@
 {
-  "name": "react-styled-boilerplate",
+  "name": "react-ssr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -31,9 +31,11 @@
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/polyfill": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
+    "@babel/register": "^7.10.5",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.6",
     "babel-core": "^6.26.3",
@@ -46,6 +48,7 @@
     "eslint-plugin-react": "^7.20.3",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
+    "ignore-styles": "^5.0.1",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
@@ -58,6 +61,7 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
+    "core-js": "2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
