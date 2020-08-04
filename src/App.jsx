@@ -1,4 +1,5 @@
-import React, { useState, lazy, Suspense } from 'react'
+import React, { useState, lazy, Suspense } from '../node_modules/react'
+import { Header } from './Header'
 
 const Warning = lazy(async () => ({
   default: (await import(/* webpackChunkName: "other" */ './Warning')).Warning,
@@ -11,6 +12,7 @@ export const App = () => {
 
   return (
     <>
+      <Header />
       <h1>Hello world</h1>
       <h2>Count: {count}</h2>
       <button onClick={() => setCount(count + 1)}>+</button>
