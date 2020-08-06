@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from '../node_modules/react'
+import logo from './assets/images/logo.png'
+import './assets/styles/header.css'
 
 export const Header = () => {
+  const [now] = useState(new Date().getTime())
   const [headerTitle, setHeaderTitle] = useState('...')
 
   useEffect(() => {
@@ -11,8 +14,11 @@ export const Header = () => {
   }, [])
 
   return (
-    <div>
-      <h1>{headerTitle}</h1>
+    <div className="header">
+      <img width={50} src={logo} alt="Mercado Livre" />
+      <h1>
+        {headerTitle} <span>{now}</span>
+      </h1>
       <ul>
         <li>
           <a href="">Link</a>
@@ -24,7 +30,6 @@ export const Header = () => {
           <a href="">Link3</a>
         </li>
       </ul>
-      <hr />
     </div>
   )
 }
