@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+.header,
+.header a {
+  color: #1de9b6;
+}
